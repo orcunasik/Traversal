@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Traversal.Repository\Traversal.Repository.csproj" />
+  </ItemGroup>
+
 </Project>
