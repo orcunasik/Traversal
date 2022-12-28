@@ -1,7 +1,18 @@
+using Microsoft.EntityFrameworkCore;
+using System.Reflection;
+using Traversal.Repository.Concretes;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<TraversalContext>(x =>
+{
+    x.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection"),option =>
+    {
+        option.MigrationsAssembly(Assembly.GetAssembly(typeof(TraversalContext)).GetName().Name);
+    });
+});
 
 var app = builder.Build();
 
