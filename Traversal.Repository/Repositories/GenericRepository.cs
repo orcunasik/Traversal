@@ -1,10 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 using Traversal.Core.Models.Abstract;
 using Traversal.Core.Repositories;
 using Traversal.Repository.Concretes;
@@ -20,7 +15,7 @@ namespace Traversal.Repository.Repositories
         {
             _context = context;
             _dbSet = _context.Set<T>();
-        }      
+        }
 
         public async Task AddAsync(T entity)
         {

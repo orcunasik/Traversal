@@ -11,7 +11,7 @@ namespace Traversal.Repository.Configurations
             builder.HasKey(n => n.Id);
             builder.Property(n => n.Id).UseIdentityColumn();
             builder.Property(n => n.Mail).IsRequired().HasMaxLength(100);
-;
+
             builder.ToTable("Newsletters");
         }
     }

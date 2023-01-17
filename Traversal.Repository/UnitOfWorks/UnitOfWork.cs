@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Traversal.Core.UnitOfWorks;
+﻿using Traversal.Core.UnitOfWorks;
 using Traversal.Repository.Concretes;
 
 namespace Traversal.Repository.UnitOfWorks
